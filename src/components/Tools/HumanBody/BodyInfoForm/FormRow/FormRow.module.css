@@ -1,0 +1,40 @@
+.formField{
+    font-family: inherit;
+  width: 60%;
+  border: 0;
+  border-bottom: 2px solid #ec2f1e;
+  outline: 0;
+  font-size: 1rem;
+  color: grey;
+  padding: 7px 0;
+  background: transparent;
+  
+  margin-top: 1em;
+  padding: 0.5em;
+  margin-left: 1em;
+  align-self: center;
+  
+  }
+  
+  .formField:focus{
+  border-radius: 0.5em;
+  border: 2px solid #ec2f1e;
+  }
+  
+  .formRow{
+  display: flex ;
+  padding: 0.5em;
+  justify-content: flex-end;
+  align-content: flex-end;
+  }
+  
+  label{
+  width: 30%;
+  /* padding: 1em; */
+  align-self: center;
+  margin-right: 1.5em;
+  }
+
+textarea{
+  resize: none;
+}

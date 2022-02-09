@@ -1,0 +1,18 @@
+button {
+    padding: .8em;
+    
+    border: 0;
+    border-radius: 1em;
+    color: white;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.Cancel {
+    background-color: grey;
+
+}
+
+.Success {
+    background-color: #ec2f1e;
+}

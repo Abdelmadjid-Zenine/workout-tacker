@@ -1,0 +1,32 @@
+.SideBar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 4em .5em;
+    left: 0;
+    top: 6.5%;
+    width: 15%;
+    height: 100%;
+    gap: 3em;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 5px 5px grey;
+    
+}
+
+.SideBar a {
+    text-decoration: none;
+    color: red;
+    text-align: center;
+    font-size: 1.3rem;
+    
+    
+}
+.SideBar a:hover,
+.SideBar a:active,
+.SideBar a.active{
+
+    border-bottom: 2px solid red;
+    width: 90%;
+   
+}

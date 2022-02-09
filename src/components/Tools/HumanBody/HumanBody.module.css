@@ -1,0 +1,100 @@
+.Container{
+    position: fixed;
+    left: 15.5%;
+    top:6.5%;
+    background-image:  url("../../../assets/images/mesures.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    width: 85%;
+    height: 100%;
+}
+.HumanBody {
+    width: 207px;
+    position: relative;
+    
+    height: 400px;
+    display: block;
+    
+    transform: translateY(50%);
+    margin: auto auto;
+    z-index: 3;
+    
+}
+
+.HumanBody svg:hover {
+    cursor: pointer;
+}
+.HumanBody svg:hover path {
+    fill: #ffd6a0;
+}
+.noHover{
+    pointer-events: none;
+}
+
+.HumanBody svg {
+    position: absolute;
+    left: 50%;
+    fill: #ec2f1e;
+    
+    
+}
+.HumanBody svg.Head {
+    margin-left: -28.4px;
+    top: -6px;
+    z-index: 1;
+}
+.HumanBody svg.shoulder {
+    margin-left: -53.5px;
+    top: 69px;
+}
+/*** ARMS ***/
+.HumanBody svg.arm {
+    margin-left: -78px;
+    top: 112px;
+    z-index: 1;
+}
+.HumanBody svg.leftArm {
+    margin-left: -78px;
+    top: 112px;
+}
+.HumanBody svg.RightArm {
+    margin-left: -78px;
+    top: 112px;
+}
+
+.HumanBody svg.cheast {
+    margin-left: -43.5px;
+    top: 88px;
+    z-index: 1;
+}
+.HumanBody svg.stomach {
+    margin-left: -37.5px;
+    top: 130px;
+    z-index: 1;
+}
+.HumanBody svg.legs {
+    margin-left: -46.5px;
+    top: 205px;
+    /* z-index: 9999; */
+    z-index: 1;
+}
+.HumanBody svg.hands {
+    margin-left: -102.5px;
+    top: 224px;
+    z-index: 1;
+}
+#area {
+    display: block;
+    width: 100%;
+    clear: both;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Courier New;
+    color: #a5a5a5;
+}
+
+#area #data {
+    color: black;
+}

@@ -1,4 +1,4 @@
-// import { extend } from "dayjs"
+
 import React, {Component} from "react"
 import styles from "./BodyInForm.module.css"
 import FormRow from "./FormRow/FormRow";
@@ -36,9 +36,9 @@ class BodyData extends Component {
     }
     renderInputs = (part) => {
         let formContent = null
-        console.log(part.includes(BODYPARTS['Head']));
-        switch(part) {
-            case (part.includes(BODYPARTS['Head'])):
+        
+        
+            if(part.includes(BODYPARTS['Head'])){
                 
                 formContent =  
                         <div className="Infos">
@@ -47,18 +47,18 @@ class BodyData extends Component {
                             <FormRow inputType="date"  name="measureDate" Label="Date : " placeholder="Date de mesure" onfocus={changeType}/>
                         </div>
                    
-               break; 
             
-            case (BODYPARTS['Shoulder']):
+            }
+            else if (part.includes(BODYPARTS['Shoulde)r'])){
                 
                 formContent =  
                     <div className="Infos">
                         <FormRow inputType="number" name="shoulderDate" Label="Mesure : " placeholder="Mesure en (cm)"/>
                         <FormRow inputType="date"  name="measureDate" Label="Date : " placeholder="Date de mesure" onfocus={changeType}/>
                     </div>
-               break; 
-                    
-            case  (BODYPARTS['Arms']):
+                
+            }        
+            else if(part.includes(BODYPARTS['Arms'])){
                 
                 formContent = 
                     <div className="Infos">
@@ -68,16 +68,16 @@ class BodyData extends Component {
                         <FormRow inputType="date"  name="measureDate" Label="Date : " placeholder="Date de mesure" onfocus={this.changeType}/>
                     </div>
                     
-                break;   
-            case (BODYPARTS['waist']):
+            }  
+            else if(part.includes(BODYPARTS['waist'])){
                  
                 formContent = 
                 <div className="Infos">
                     <FormRow inputType="number" name="waistSize" Label="Tour de taille : " placeholder="Mesure en (cm)"/>
                     <FormRow inputType="date"  name="measureDate" Label="Date : " placeholder="Date de mesure" onfocus={this.changeType}/>                    
                 </div>
-                break;    
-            case (BODYPARTS['Legs']):
+            }    
+            else if(part.includes(BODYPARTS['Legs'])){
                     
                 formContent = 
                     <div className="Infos">
@@ -85,10 +85,10 @@ class BodyData extends Component {
                         <FormRow inputType="number" name="rightThighSize" Label="Cuisse droite : " placeholder="Mesure en (cm)"/>
                         <FormRow inputType="date"  name="measureDate" Label="Date : " placeholder="Date de mesure" onfocus={this.changeType}/>
                     </div>
-                    break;
-            default:
+            }
+            else
                 return null;       
-        }
+        
         return formContent;
     }
     render() {
@@ -97,7 +97,7 @@ class BodyData extends Component {
             
             <div className={!(this.props.isformShown)?[styles.BodyData, styles.Hide].join(" "):styles.BodyData}>
                 <form className={styles.FormContainer} onSubmit={this.submitFormHandler}>
-                    {console.log(this.props.selectedBodyPart)}
+                    
                     {this.renderInputs(this.props.selectedBodyPart)}
                     
                     <div className={styles.Buttons}>

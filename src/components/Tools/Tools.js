@@ -5,6 +5,7 @@ import { Route, Routes} from "react-router-dom";
 import HumanBody from "./HumanBody/HumanBody";
 import Sidebar from "../SideBar/SideBar";
 import Weight from "./Weight/Weight";
+import Imc from "./IMC/Imc";
 class Tools extends Component {
     
     render(){
@@ -14,6 +15,7 @@ class Tools extends Component {
                 <Routes>   
                     <Route path={"/bodyMesures"}  element={<HumanBody/>}/>
                     <Route path={"/weight"} element={<Weight/>}/>
+                    <Route path={"/imc"} element={<Imc/>}/>
                 </Routes>
 
             </div>

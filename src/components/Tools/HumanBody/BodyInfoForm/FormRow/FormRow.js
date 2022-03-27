@@ -1,12 +1,13 @@
+import React from "react";
 import styles from "./FormRow.module.css"
 
-const FormRow = (props) => {
+const FormRow = React.forwardRef((props, ref) => {
     const formInput = (props.inputType == "textarea")?
         <textarea rows={5} className={styles.formField}>
 
         </textarea>
         :
-        <input className={styles.formField} type={(props.inputType === "date")? "text":props.inputType} 
+        <input className={styles.formField} ref={ref} type={(props.inputType === "date")? "text":props.inputType} 
                    name={props.name} placeholder={props.placeholder} 
                    onFocus={(props.inputType === "date") ? (e) =>{props.onfocus(e)}: null}/>
     return (
@@ -18,5 +19,5 @@ const FormRow = (props) => {
 
         </div>
     );
-}
+})
 export default FormRow;
